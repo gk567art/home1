@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family: "lato", sans-serif;}
+
+ .tablink{
+   background-color: #555;
+   color:white;
+   float: left;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 14px 16px;
+   font-size: 17px;
+   width: 25%;
+}
+
+.tablink:hover{
+backgroud-color: #777;
+}
+
+ .tabcontent{
+  color: white;
+  display:none;
+  padding: 50px;
+  text-align: center;
+}
+#karthik {background-color: red;}
+#ramesh{background-color: green;}
+#laxmi{background-color: blue;}
+#jyoshnavi{background-color:orange;}
+</style>
+</head>
+<body>
+
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div id="karthik" class="tabcontent">
+  <h1>karthik</h1>
+  <p>7989683519.</p>
+</div>
+
+<div id="ramesh" class="tabcontent">
+  <h1>ramesh</h1>
+  <p> 9866577853.</p> 
+</div>
+
+<div id="laxmi" class="tabcontent">
+  <h1>laxmi</h1>
+  <p>8143577853.</p>
+</div>
+
+<div id="jyoshnavi" class="tabcontent">
+  <h1>jyoshnavi</h1>
+  <p>7386577853.</p>
+</div>
+
+
+<button class="tablink" onclick="openfamily('karthik', this, 'red')" id="defaultOpen">karthik</button>
+<button class="tablink" onclick="openfamily('ramesh', this, 'green')">ramesh</button>
+<button class="tablink" onclick="openfamily('laxmi', this, 'blue')">laxmi</button>
+<button class="tablink" onclick="openfamily('jyoshnavi', this, 'orange')">jyoshnavi</button>
+<script>
+function openfamily(personName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(personName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
+
+
+
+
+
+   
+
+       
+   
+
+    
+
+
+
